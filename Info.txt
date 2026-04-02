@@ -1,0 +1,48 @@
+Task: {
+ id: string,
+ title: string,
+ category: string,
+ priority: string,
+ completed: boolean,
+ createdAt: date,
+ dueDate: date | null,
+ estimatedSessions: number
+}
+
+Session: {
+ id: string,
+ taskId: string,
+ duration: number,
+ completedAt: date,
+ focusRating: "low" | "medium" | "deep"
+}
+
+User: {
+ id: string,
+ name: string,
+ dailyFocusGoal: number,
+ preferredSessionLength: number
+}
+
+
+API Contract : 
+TASKS
+GET    /tasks
+POST   /tasks
+PATCH  /tasks/:id
+DELETE /tasks/:id
+
+SESSIONS
+GET    /sessions
+POST   /sessions
+
+USER
+GET    /user
+PATCH  /user
+
+
+
+things that are hardcoadde 
+setTasks(...) 
+setFocusSessions(...)
+use api here 
